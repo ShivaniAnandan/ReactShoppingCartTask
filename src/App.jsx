@@ -4,7 +4,10 @@ import Navbar from './components/Navbar'
 import Header from './components/Header'
 import ProductList from './components/ProductList'
 import Footer from './components/Footer'
-// Importing Bootstrap JS and its dependencies
+// Import Bootstrap CSS
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+// Import Bootstrap JS bundle (including Popper.js)
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 function App() {
@@ -12,12 +15,12 @@ function App() {
 
   const addToCart = (product) => {
     setCart([...cart, product]);
-    console.log(cart);
+    
   };
 
   const removeFromCart = (product) => {
     setCart(cart.filter((item) => item.id !== product.id));
-    console.log(cart);
+    
   };
 
 
